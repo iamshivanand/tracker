@@ -13,17 +13,18 @@ body {
 }
 .header_logo {
   height: 100%;
-  width: 25vw;
+  width: 50px;
   display: flex;
   justify-content: space-between;
 }
 .bug_Icon {
   color: white;
+  margin: auto;
 }
 
 .heading {
   color: white;
-  margin: 0%;
+  margin: auto;
   font-family: Arial;
 }
 .profile_Icon {
@@ -43,7 +44,8 @@ body {
 }
 
 /* home page css */
-.create-project {
+.create-project,
+.create-issue-button {
   display: flex;
   flex-direction: row-reverse;
   margin: 5px;
@@ -55,8 +57,8 @@ body {
 }
 .project-container {
   margin: 10px;
-  height: 60vh;
-  width: 40vw;
+  height: auto;
+  width: 300px;
   display: flex;
   flex-direction: column;
   background-color: lightgrey;
@@ -64,20 +66,84 @@ body {
   box-shadow: 8px 8px 10px rgba(0, 130, 232, 0.4);
 }
 .project-avatar {
-  height: 100%;
+  height: 50%;
   width: 100%;
 }
 .project-avatar img {
   height: 100%;
   width: 100%;
- border-top-left-radius: 10px;
- border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .project-name {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  font-family:cursive;
+  /* font-style: italic; */
+}
+.project-name div{
+float: right;
 }
 
-.project-name h3 {
+
+.project-name h4 {
+  margin: 5px;
+}
+
+/* bug-table */
+.bug-table {
+  /* border: 2px solid black; */
+  margin: 10px;
+  box-shadow: 8px 8px 10px rgba(80, 81, 82, 0.9);
+  border-radius: 10px;
+}
+
+/*issue form */
+.form-heading {
+  display: flex;
+  justify-content: space-around;
+}
+.form-heading h2 {
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+}
+.create-issue-main,
+.create-project-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.issue-form {
+  margin-block-start: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 350px;
+  width: 300px;
+  /* border: 2px solid black; */
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 8px 8px 10px rgba(80, 81, 82, 0.9);
+}
+.create-project-form {
+  margin-block-start: 40px;
+  height: auto;
+  width: 75%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 8px 8px 10px rgba(80, 81, 82, 0.9);
+}
+.create-project-form form {
+  margin-left: 20px;
+}
+.create-project-submit,
+.create-issue-submit {
+  display: flex;
+
   margin: 5px;
 }

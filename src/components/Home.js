@@ -1,12 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
+import { Link } from "react-router-dom";
 
-export default class Home extends Component {
-  render() {
-    return (
-      <div className="home">
-        <div className="create-project">
+function Home(props) {
+  const title = props.details.title;
+  const author = props.details.author;
+  console.log("title:", title, "author:", author);
+
+  return (
+    <div className="home">
+      <div className="create-project">
+        <Link to="/create-project" style={{ textDecoration: "none" }}>
           <Button
             variant="contained"
             color="secondary"
@@ -15,22 +20,31 @@ export default class Home extends Component {
           >
             Create Project
           </Button>
-        </div>
-        <div className="project-container-wrapper">
+        </Link>
+      </div>
+
+      <div className="project-container-wrapper">
+        <Link to="/project-details" style={{ textDecoration: "none" }}>
           <div className="project-container">
             <div className="project-avatar">
               <img
-                src="https://lh3.googleusercontent.com/proxy/0C8UjpjueFoNP5PTHOqZnsduWyRmvxP_xRE_OlXwSmST5rKjqC85jLlc6GzabcAX2Ckg-pgef7z_sf0zWMsyrDjHxLuQvQnGWwbkEs6S_fnn3RfRVyxieQ"
+                src="https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2017Q2/project-planning-header@2x.png"
                 alt="project-avatar"
               />
             </div>
             <div className="project-name">
-              <h3>Hello Universe</h3>
+              <div className="title">
+                <h4>Title:{title}</h4>
+              </div>
+              <div className="author">
+                <h4>Author:{author}</h4>
+              </div>
             </div>
           </div>
-          
-        </div>
+        </Link>
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+export default Home;
