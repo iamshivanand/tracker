@@ -79,6 +79,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family:cursive;
+  color: rgb(32, 24, 24);
   /* font-style: italic; */
 }
 .project-name div{

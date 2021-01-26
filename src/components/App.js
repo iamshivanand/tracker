@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import { connect } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
@@ -11,9 +11,10 @@ import {
   Page404,
 } from "./";
 
+
 function App(props) {
   const details = props.details;
-  console.log(details);
+  
   return (
     <Router>
       <div className="App">
